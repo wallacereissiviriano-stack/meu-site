@@ -1,62 +1,124 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Meu Site</title>
+  <title>Guia Digital</title>
+
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: white;
-      text-align: center;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Georgia", serif;
     }
 
-    header {
-      padding: 40px;
-      font-size: 2em;
-      font-weight: bold;
+    body {
+      background: #f5f5f5;
+      color: #111;
     }
 
-    .box {
-      margin: 40px auto;
-      padding: 20px;
-      width: 80%;
+    /* PRIMEIRA TELA */
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px;
+      background: #f5f5f5;
+    }
+
+    .text {
       max-width: 500px;
-      background: #334155;
-      border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.5);
     }
 
-    button {
-      padding: 10px 20px;
-      border: none;
-      border-radius: 10px;
-      background: #22c55e;
-      color: black;
-      font-weight: bold;
-      cursor: pointer;
+    .text h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
     }
 
-    button:hover {
-      background: #16a34a;
+    .text p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .image {
+      width: 45%;
+    }
+
+    .image img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    /* SEGUNDA PARTE (RODANDO PRA BAIXO) */
+    .footer {
+      padding: 100px 20px;
+      text-align: center;
+      background: #ffffff;
+    }
+
+    .footer h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .footer p {
+      margin: 10px 0;
+      color: #444;
+    }
+
+    .linha {
+      margin-top: 30px;
+      color: #777;
+      font-size: 14px;
+    }
+
+    @media(max-width: 900px){
+      .hero{
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .image{
+        width: 100%;
+        margin-top: 30px;
+      }
     }
   </style>
 </head>
-
 <body>
 
-<header>
-  Meu Primeiro Site 🚀
-</header>
+  <!-- PARTE 1 -->
+  <section class="hero">
+    
+    <div class="text">
+      <h1>Nossa proposta :)</h1>
+      <p>
+        Nossa missão é atuar como um guia inteligente, auxiliando você a compreender melhor suas decisões e a fazer escolhas mais conscientes no cotidiano.
+        <br><br>
+        Por meio de orientações simples e práticas, mostramos como pequenas mudanças de hábito podem impactar positivamente sua qualidade de vida e favorecer uma saúde mais equilibrada e estável.
+      </p>
+    </div>
 
-<div class="box">
-  <h2>Bem-vindo</h2>
-  <p>Esse site foi feito usando inteligência artificial.</p>
-  <button onclick="alert('Funcionando perfeitamente 😎')">
-    Clique aqui
-  </button>
-</div>
+    <div class="image">
+      <!-- COLOCA SUA IMAGEM AQUI -->
+      <img src="imagem.jpg" alt="">
+    </div>
+
+  </section>
+
+  <!-- PARTE 2 -->
+  <section class="footer">
+    <h2>Guia Digital</h2>
+
+    <p>(sac): 3140028922</p>
+    <p>R. Paineiras, 1300 - Eldorado, Contagem - MG</p>
+
+    <div class="linha">
+      Política de Privacidade • Termos de Serviço
+    </div>
+  </section>
 
 </body>
 </html>
